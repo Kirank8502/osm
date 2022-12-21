@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/teacher_login.css') }}">
+    <title>Teacher Login</title>
+</head>
+<body>
+    <section class="vh-100">
+        <div class="container-fluid h-custom mt-md-5">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-8 col-lg-7 col-xl-5">
+              <img src="{{ url_for('static', filename='img/teacher_login.jpg') }}"
+                class="img-fluid" alt="Teacher image">
+            </div>
+            <div class="col-md-8 col-lg-6 col-xl-4">
+              <form method="POST">
+                <!-- Admin input -->
+                <div class="form-outline mb-4">
+                    <label class="form-label text-primary" for="teacher_name">Teacher Name</label>
+                    <i class="fa fa-exclamation-circle"></i>
+                  <input type="text" id="teacher_name" pattern="[A-Za-z, ]+" name="teacher_name"
+                  class="form-control form-control-lg teacher_name" placeholder="Enter Teacher name" required/>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <label class="form-label text-primary" for="teacher_email">Email ID</label>
+                  <i class="fa fa-exclamation-circle"></i>
+                  <input type="email" id="teacher_email" name="teacher_email"
+                  class="form-control form-control-lg teacher_email" placeholder="Enter Email ID" required/>
+                </div>
+      
+                <!-- Password input -->
+                <div class="form-outline mb-3">
+                    <label class="form-label text-primary" for="pass">Password</label>
+                    <i class="fa fa-exclamation-circle"></i>
+                  <input type="password" id="pass" class="form-control form-control-lg pwd" name="pass"
+                    placeholder="Enter password" required/>
+                </div>
+      
+                <div class="d-flex align-items-end justify-content-between my-2 float-right">
+                  <a href="" class="text-body text-primary">Forgot password?</a>
+                </div>
+      
+              <div class="btn-group d-flex mb-4">
+                <div class="col text-lg-start mt-5">
+                  <button type="button" onclick="window.location='/'" class="btn btn-lg hover-btn-outline-primary">Back</button>
+                </div>
+
+                <div class="col text-lg-start mt-5">
+                  <button type="submit" class="btn btn-lg hover-btn-outline-primary">Login</button>
+                </div>
+              </div>
+      
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="d-flex flex-column k-footer">
+        <!-- Copyright -->
+        <div class="mb-3 mb-md-0 p-4">
+          Copyright © 2022. All rights reserved.
+        </div>
+        <!-- Copyright -->
+      </footer>
+      <!-- <script src="{{ url_for('static', filename='js/script.js') }}"></script> -->
+</body>
+</html>

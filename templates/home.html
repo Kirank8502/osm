@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/home.css')}}">
+    <title>Home</title>
+</head>
+
+<body>
+    <img src="{{ url_for('static', filename='img/logo-nkc.png') }}" width="1000px" height="200px">
+    <nav class="navbar navbar-expand-md">
+        <div class="container-fluid">
+            <b><a class="navbar-brand" href="#">OSM@NKC</a></b>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-md-center" id="navbarCollapse">
+                <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+                    <li class="nav-item pe-3">
+                        <div class="dropdown-center">
+                            <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Login</button>
+                            <ul class="dropdown-menu dropdown-menu-md-end">
+                                <li><a class="dropdown-item" href="/admin/login">Admin</a></li>
+                                <li><a class="dropdown-item" href="/teacher/login">Teacher</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <div class="header">
+        <!-- CONTENT BEFORE WAVE -->
+        <div class="inner-header flex">
+            <h1 class="h1">WELCOME TO <span class="spn">OSM</span></h1>
+        </div>
+        <div>
+            <svg class="waves" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave"
+                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
+
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                </g>
+
+            </svg>
+        </div>
+    </div>
+
+    <div class="content flex"></div>
+    <div class="b-example-divider"></div>
+    <section class="section section-free">
+        <div class="overlay">
+        </div>
+        <div class="container">
+            <h2 class="text-center display-4 fw-normal text-white">About OSM </h2>
+            <p class=" para text-white">
+                On-Screen Marking system completely automates the marking and scoring
+                of descriptive answer scripts into an accurate, simple, secure and efficient process
+                On-Screen Marking (OSM) system provides an extensive platform for evaluating pen and paper based
+                examinations on computer screens
+                <br>
+                <br>
+                On-Screen Marking System, to help educational institutions & commissions increase efficiency and reduce
+                costs around assessing physical examination
+                documents.The System effectively automates and streamlines handling of physical documents; enabling
+                educational institutions to transform their traditional paper based examination evaluation systems.
+                <br>
+                <br>
+                The process of conducting and evaluating paper-based exams is very complex and challenging. As the
+                number of candidates appearing for these examinations is constantly increasing day by day, there is a
+                large volume of paper scripts to be managed, requiring extensive logistics for their distribution to the
+                evaluation centres, spread across geographies. And keeping this at a secure place engaged lots of space.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- STEPS CODE -->
+    <div class="b-example-divider"></div>
+    <div class="container py-3">
+        <header class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+            <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+                <h1 class="display-5 fw-normal">STEPS TO GO WITH OSM</h1>
+            </div>
+            <div class="">
+            </div>
+        </header>
+
+        <main>
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                <!-- CARD 1 -->
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                        <div class="card-header py-3">
+                            <h4 class="my-0 fw-normal">STEP - 1</h4>
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title pricing-card-title"><img
+                                    src="https://img.icons8.com/ios-filled/40/000000/user-male-circle.png"
+                                    class="mb-2" /> LOGIN</h2>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <p class="p">Click On Login as per Your Role. <br>It can Be Either 'ADMIN LOGIN'
+                                    or 'TEACHER LOGIN'</p>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                        <div class="card-header py-3">
+                            <h4 class="my-0 fw-normal">STEP - 2</h4>
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title pricing-card-title"><img
+                                    src="https://img.icons8.com/external-kmg-design-basic-outline-kmg-design/32/000000/external-dashboard-ui-essential-kmg-design-basic-outline-kmg-design.png"
+                                    class="mb-2 me-3" />DASHBOARD</h2>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <p class="p">Dashboard Will Apper According to Your Role<br>ADMIN - Can assign
+                                    work To Teachers <br> TEACHER - Work Assigned By Admin Will be Visible</p>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                        <div class="card-header py-3">
+                            <h4 class="my-0 fw-normal">STEP - 3</h4>
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title pricing-card-title"><img
+                                    src="https://img.icons8.com/pastel-glyph/40/000000/heart-monitor.png"
+                                    class="mb-2" /> ACTIVITY</h2>
+                            <ul class="list-unstyled mt-3 mb-3">
+                                <p class="p">In this Session , Activity Completed According To Your Role Will be Visible
+                                    in the form Of a Graph<br>Paper Checking Role will be Assigned in this Session</p>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                        <div class="card-header py-3">
+                            <h4 class="my-0 fw-normal">STEP - 4</h4>
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title pricing-card-title"><img
+                                    src="https://img.icons8.com/cotton/45/000000/thumb-up--v1.png" class="mb-3" /> READY
+                                TO GO</h2>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <p class="p">Now You Are Ready To Go Ahead With OSM !! <br>Thank You</p>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+    <footer class="d-flex flex-column k-footer">
+        <!-- Copyright -->
+        <div class="mb-3 mb-md-0 p-4">
+          Copyright © 2022. All rights reserved.
+        </div>
+        <!-- Copyright -->
+      </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dash.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="stylesheet" href="dash.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Dashboard</title>
+</head>
+<body>
+     <input type="checkbox" id="menu">
+    <nav> 
+        <label class="d-flex align-items-center">
+            <img class="mx-4" src="{{ url_for('static', filename='img/remove.png') }}" width="100">
+            <h6>NAGINDAS KHANDWALA COLLEGE OF COMMERCE , ARTS  AND MANAGEMENT STUDIES AND SHANTABEN NAGINDAS KHANDWALA COLLEGE OF SCIENCE (AUTONOMOUS)</h6>
+            {% if session.loggedin %}
+                <h5>Hello,{{ session.username }}</h5>
+                <button class="btn btn-success mx-5" onclick="window.location='/logout'" >Logout</button>
+                {% else %}
+                <button class="btn btn-success mx-5" onclick="window.location='/admin/login'" >Login</button>
+                {% endif %}
+        </label>
+        <label for="menu" class="menu-bar"> <i class="fa fa-bars"></i></label>
+    </nav>
+    <div class="side-menu">
+        <br>
+        <a href="#"><i class="fa fa-history"></i><span>History</span></a> 
+        <a href="{{ url_for('addteacher') }}"><i class="fa fa-plus"></i><span>Add Teacher</span></a> 
+        <a href="{{ url_for('upload_file') }}"><i class="fa fa-tasks"></i><span>Assign</span></a>
+        <!-- <a href="#"><i class="fa fa-cog"></i><span>Setting</span></a>  -->
+    </div>
+    <div class="data"> 
+      {% block content %}
+      {% endblock %}
+    </div>
+</body>
+</html>
